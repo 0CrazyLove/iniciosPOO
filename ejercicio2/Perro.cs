@@ -15,7 +15,7 @@ namespace ejercicio2
 
         public void displayInformation()
         {
-            Console.WriteLine($"Su nombre es {name} ,su raza es {race} y tiene {age} el perro ");
+            Console.WriteLine($"Su nombre es {name} ,su raza es {race} y tiene {age} años el perro ");
         }
 
 
