@@ -20,6 +20,7 @@ namespace ejercicio4
             opinion.OpinionAnswer();
             string opinionUsuario = Console.ReadLine();
             usuario.Thank();
+
             
 
 
