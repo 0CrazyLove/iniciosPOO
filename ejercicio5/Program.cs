@@ -22,7 +22,7 @@ namespace ejercicio5
             selectArticle.SelectArticle();
 
 
-            //no terminado.
+            
 
         }
     }
