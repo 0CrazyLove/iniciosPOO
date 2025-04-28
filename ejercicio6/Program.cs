@@ -18,7 +18,8 @@ namespace ejercicio6
             Console.WriteLine($"nuevo nombre: {persona1.GetName()}");
             Console.WriteLine($"nueva edad: {persona1.GetAge()}");
             persona1.SetAge(2); // prueba de la validacion de edad negativa
-            Console.WriteLine($"nueva edad: {persona1.GetAge()}");
+         
+            
 
         }
     }
