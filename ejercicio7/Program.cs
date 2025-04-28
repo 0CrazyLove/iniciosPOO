@@ -21,6 +21,7 @@ namespace ejercicio7
             Console.WriteLine($"Producto: {producto.GetName()}");
             Console.WriteLine($"precio: {producto.GetPrice()}COP");
 
+            //codigo mejorable
         }
     }
 }
