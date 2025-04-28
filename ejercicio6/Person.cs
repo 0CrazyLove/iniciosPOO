@@ -15,18 +15,18 @@ namespace ejercicio6
         //mi constructor
         public Person(string name, int age)
         {
-            this.name = name;
+            this.name = name; 
             this.age = age;
         }
-        //metodo para obtener la edad(Getter)
+        //metodo para obtener el nombre(Getter)
         public string GetName()
         {
             return name;
         }
-        //metodo set para cambiar la edad (Setter)
-        public void SetName(string Newname)
+        //metodo set para cambiar el name(Setter)
+        public void SetName(string newName)
         {
-            name = Newname;
+            name = newName;
         }
         //metodo para obtener la edad(Getter)
         public int GetAge()
