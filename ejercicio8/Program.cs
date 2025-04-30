@@ -20,7 +20,7 @@ namespace ejercicio8
             employe1.EmployeeStatus = "activo";
             employe1.DisplayInformation();
 
-            Console.WriteLine(employe1.Name);
+           
 
 
 

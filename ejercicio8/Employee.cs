@@ -10,9 +10,18 @@ namespace ejercicio8
     {
         //atributos privados
 
+
         private string name;
         private double salary;
         private string employeeStatus;
+        
+        //constructor 
+        public Employee(string name, double salary, string employeeStatus)
+        {
+            Name = name;
+            Salary = salary;
+            EmployeeStatus = employeeStatus;
+        }
 
         //propiedad para el nombre 
         public string Name
@@ -73,13 +82,6 @@ namespace ejercicio8
             }
         }
 
-        //constructor
-        public Employee(string name, double salary, string employeeStatus)
-        {
-            Name = name;
-            Salary = salary;
-            EmployeeStatus = employeeStatus;
-        }
 
 
         //metodo para mostrar los datos del empleado 
