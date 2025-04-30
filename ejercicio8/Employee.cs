@@ -87,6 +87,7 @@ namespace ejercicio8
         //metodo para mostrar los datos del empleado 
         public void DisplayInformation()
         {
+
             Console.WriteLine($"Nombre: {Name}");
             Console.WriteLine($"Salario: {Salary.ToString("f3")}COP");
             Console.WriteLine($"Estado de empleo: {EmployeeStatus}");
