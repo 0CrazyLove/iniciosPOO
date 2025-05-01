@@ -53,9 +53,13 @@ namespace ejercicio9
 
 
             }
+            else if (answer.ToLower() == "no")
+            {
+                Console.WriteLine("No se ha cambiado la contraseña");
+            }
             else
             {
-                Console.WriteLine("Gracias por usar el programa");
+                Console.WriteLine("Error: respuesta no valida");
             }
 
 
