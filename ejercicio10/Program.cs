@@ -22,9 +22,9 @@ namespace ejercicio10
             do
             {
                 Console.Write("Por favor ingrese su salario: ");
-
                 input = Console.ReadLine();
             } while (!double.TryParse(input, out salary));
+
             CuentaBancaria usuario1 = new CuentaBancaria(numberAccount, titler, salary);
             usuario1.DisplayInformation();
             Console.WriteLine("\n 1)¿Quieres depositar dinero? \n 2)¿Quiere hacer un retiro?");

@@ -92,6 +92,7 @@ namespace ejercicio10
         //metodo para mostrar la informacion del cuenta
         public void DisplayInformation()
         {
+            Console.Clear();
             Console.WriteLine("-----------------------------------------------------------------------------");
             Console.WriteLine("                           informacion de la cuenta:");
             Console.WriteLine($"numero cuenta: {numberAccount}");
