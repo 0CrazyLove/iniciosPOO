@@ -1,7 +1,9 @@
-C:\axel\Devolper\c#\POO\POO\bin\Debug\POO.exe.config
-C:\axel\Devolper\c#\POO\POO\bin\Debug\POO.exe
-C:\axel\Devolper\c#\POO\POO\bin\Debug\POO.pdb
-C:\axel\Devolper\c#\POO\POO\obj\Debug\POO.csproj.AssemblyReference.cache
-C:\axel\Devolper\c#\POO\POO\obj\Debug\POO.csproj.CoreCompileInputs.cache
-C:\axel\Devolper\c#\POO\POO\obj\Debug\POO.exe
-C:\axel\Devolper\c#\POO\POO\obj\Debug\POO.pdb
+C:/axel/Devolper/c#/POO/POO/bin/Debug/POO.exe.config
+C:/axel/Devolper/c#/POO/POO/bin/Debug/POO.exe
+C:/axel/Devolper/c#/POO/POO/bin/Debug/POO.pdb
+C:/axel/Devolper/c#/POO/POO/obj/Debug/POO.csproj.AssemblyReference.cache
+C:/axel/Devolper/c#/POO/POO/obj/Debug/POO.csproj.CoreCompileInputs.cache
+C:/axel/Devolper/c#/POO/POO/obj/Debug/POO.exe
+C:/axel/Devolper/c#/POO/POO/obj/Debug/POO.pdb
+/home/crazy/c#/iniciosPOO/POO/obj/Debug/POO.exe
+/home/crazy/c#/iniciosPOO/POO/obj/Debug/POO.pdb
