@@ -10,8 +10,18 @@ namespace ejercicio14
     {
         static void Main(string[] args)
         {
-            Animal animal = new Animal(2);
-            animal.Display();
+            //instanciando de clases derivadas de las clase base(Cat)
+            Cat cat = new Cat("Miguel", 19, "Domestico", "Blanco");
+            cat.DisplayInfo();
+            cat.DisplayColor();
+            Console.WriteLine("-------------------");
+            //instanciando de clases derivadas de las clase base(Dog)
+
+            Dog dog = new Dog("Axel", 16, "Salvaje", "Labrador");
+            dog.DisplayInfo();
+            dog.DisplayRace();
+
+            
         }
     }
 }
