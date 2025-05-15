@@ -42,7 +42,7 @@ class Cat : Animal
 
     //contrusctor
     public Cat(string name, int age, string type, string color) : base(name, age, type)
-    {
+    {  
 
         Color = color;
 
