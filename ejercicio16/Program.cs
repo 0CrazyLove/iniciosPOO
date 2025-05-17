@@ -10,7 +10,13 @@ namespace ejercicio16
     {
         static void Main(string[] args)
         {
-          
+            MisionExploracion misionExploracion = new MisionExploracion("jungla", 15, "planeta jungla");
+            misionExploracion.decriptionInfo();
+            misionExploracion.ExeCuteMision();
+
+            MisionInvestigation misionInvestigation = new MisionInvestigation("selva", 20, "investigar fenomenos");
+            misionInvestigation.decriptionInfo();
+            misionInvestigation.ExeCuteMision();
         }
     }
 }

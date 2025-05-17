@@ -10,42 +10,84 @@ namespace ejercicio16
         private string name;
         private int durationDays;
 
+        public MisionSpecial(string name, int durationDays)
+        {
+            Name = name;
+            DurationDays = durationDays;
+        }
+
+        public string Name
+        {
+            get { return name; }
+            set
+            {
+                if (String.IsNullOrEmpty(value))
+                {
+                    Console.WriteLine("Error. Vuelva escribir su nombre");
+
+                }
+                else
+                {
+                    this.name = value;
+                }
+
+            }
+        }
+        public int DurationDays
+        {
+            get { return durationDays; }
+            set
+            {
+                if (!(value <= 0))
+                {
+                    this.durationDays = value;
+                }
+                else
+                {
+                    Console.WriteLine("no se permite valores negativos");
+                    this.durationDays = 0;
+                }
+            }
+        }
+
         public abstract void ExeCuteMision();
         public void decriptionInfo()
         {
-            Console.WriteLine("description general");
-
+            Console.WriteLine($"mision: {Name} durara {DurationDays} dias");
         } 
-        
-
     }
     class MisionExploracion : MisionSpecial
     {
-        protected string DestinationPlanet;
+        public MisionExploracion(string name, int durationDays, string destinationPlanet) : base(name, durationDays)
+        {
+            this.destinationPlanet = destinationPlanet;
+            
+        }
+        protected string destinationPlanet;
+
         public override void ExeCuteMision()
         {
-            Console.WriteLine("mision de exploracion");
-            Console.WriteLine("muyyy peligrosa ñejeje");
-            Console.WriteLine("te amo chat gpt");
-
-
-
-
-
+            Console.WriteLine($"Planeta destino: {destinationPlanet}");
+            Console.WriteLine("----------------------------------------------------------------------");
         }
-
     }
+
     class MisionInvestigation : MisionSpecial
     {
-        protected string typeExperiment;
+        protected string ExperimentMain;
+        public MisionInvestigation(string name, int durationDays, string ExperimentMain) : base(name, durationDays)
+        {
+            this.ExperimentMain = ExperimentMain;
+        }
 
         public override void ExeCuteMision()
         {
-            Console.WriteLine("mision de investigacion yo que se");
+
+            Console.WriteLine($"Experimento pricipal: {ExperimentMain}");
         }
 
 
-        
+
     }
     
 
