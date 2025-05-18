@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ejercicio17", "ejercicio17\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ejercicio18", "ejercicio18\ejercicio18.csproj", "{209FA320-69B4-4667-90EC-9009DCB1DA27}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ejercicio19", "ejercicio19\ejercicio19.csproj", "{209FA320-69B4-4667-90EC-9009DCB1DA27}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
