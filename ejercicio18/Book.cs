@@ -47,11 +47,5 @@ namespace ejercicio18
         }
 
 
-
-
-
-
-
-
     }
 }
