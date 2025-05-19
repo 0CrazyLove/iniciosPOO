@@ -10,6 +10,7 @@ namespace ejercicio21
     {
         static void Main(string[] args)
         {
+
             Console.WriteLine(@"MENÚ DE PRODUCTOS
             1. Mostrar todos los productos
             2. Mostrar productos con precio menor o igual a 50.000
@@ -17,10 +18,9 @@ namespace ejercicio21
             4. Salir");
             Console.Write("escoja una opcion por favor >");
             int option = int.Parse(Console.ReadLine());
-            MenuProduct menu = new MenuProduct(option);
             List<Product> products = new List<Product>();
             products.Add(new Product("agua", 2.000m));
-            products.Add(new Product("collar", 52.000m));
+            products.Add(new Product("collar", 51.000m));
             products.Add(new Product("hamburguesa", 42.000m));
             products.Add(new Product("celular", 432.000m));
             products.Add(new Product("puerta", 98.000m));
@@ -31,6 +31,7 @@ namespace ejercicio21
                 {
                     product.DisplayList();
                 }
+                Main(args);
             }
             else if (option == 2)
             {
@@ -42,25 +43,41 @@ namespace ejercicio21
 
                     }
                 }
+                Main(args);
 
             }
             else if (option == 3)
             {
+                bool found = false;
                 Console.WriteLine("ingrese el nombre del producto deseado:");
                 string productSearch = Console.ReadLine();
                 foreach (Product product in products)
                 {
-                    if (product.Name.Equals(productSearch))
+                    if (product.Name.Equals(productSearch.ToLower()))
                     {
-                        Console.WriteLine($"si existe el producto: {product.Name}\n y su precio es: {product.Price}");
-                    
-                    }else if(!product.Name.Equals(productSearch)){
-                        Console.WriteLine("Error. producto no valido");
+                        Console.WriteLine($"si existe el producto: {product.Name}\n y su precio es: ${product.Price}COP");
+                        found = true;
+                        Main(args);
+                        break;
                     }
 
 
                 }
+                if (!found)
+                {
+                    Console.WriteLine("Error. producto no valido");
+                    Main(args);
+                }
 
+            }
+            else if (option == 4)
+            {
+                Console.WriteLine("Vuelva pronto!");
+            }
+            else
+            {
+                Console.WriteLine("error. opcion no valida.");
+                Main(args);
             }
 
 
