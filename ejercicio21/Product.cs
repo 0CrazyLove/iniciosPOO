@@ -50,7 +50,7 @@ namespace ejercicio21
         }
         public void DisplayList()
         {
-            Console.WriteLine($"nombre del producto: {Name} \n Precio:{Price} \n");
+            Console.WriteLine($"nombre del producto: {Name} \n Precio:${Price}COP \n");
         }
       
         

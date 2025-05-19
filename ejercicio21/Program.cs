@@ -48,17 +48,17 @@ namespace ejercicio21
             {
                 Console.WriteLine("ingrese el nombre del producto deseado:");
                 string productSearch = Console.ReadLine();
-                if (products.Any(p => p.Name.Equals(productSearch, StringComparison.OrdinalIgnoreCase)))
+                foreach (Product product in products)
                 {
-                    foreach (Product product in products)
+                    if (product.Name.Equals(productSearch))
                     {
-                        if (product.Name == productSearch)
-                        {
-                            Console.WriteLine(product.Price); 
-                        }
-
-
+                        Console.WriteLine($"si existe el producto: {product.Name}\n y su precio es: {product.Price}");
+                    
+                    }else if(!product.Name.Equals(productSearch)){
+                        Console.WriteLine("Error. producto no valido");
                     }
+
+
                 }
 
             }
