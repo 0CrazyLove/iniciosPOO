@@ -13,6 +13,12 @@ namespace ejercicio26
         //atributos propios de Task
         private string name;
         private int priority;
+        //constructor 
+        public Task(string name, int priority)
+        {
+            Name = name;
+            Priority = priority;
+        }
 
         //propiedad de name
         public string Name
