@@ -10,6 +10,7 @@ namespace ejercicio26
     {
         static void Main(string[] args)
         {
+            System.Console.WriteLine("hola mundo");
             
         }
     }
