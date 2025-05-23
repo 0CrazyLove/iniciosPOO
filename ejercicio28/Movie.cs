@@ -59,7 +59,7 @@ namespace ejercicio28
             set
             {
                 int current = DateTime.Now.Year;
-                if (value < 1900 && value >= current )
+                if (value < 1900 || value >= current )
                 {
                     System.Console.WriteLine("Error. fecha de estreno no es valida.");
                 }
