@@ -67,6 +67,7 @@ namespace ejercicio28
                 {
                     System.Console.WriteLine($"la pelicula {movie.Title} ha sido removida exitosamente");
                     movies.Remove(movie);
+                    found = true;
                     break;
                 }
             }

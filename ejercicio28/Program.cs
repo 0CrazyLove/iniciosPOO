@@ -23,7 +23,7 @@ namespace ejercicio28
             movieManager.AddMovie(movie3);
             movieManager.AddMovie(movie4);
             movieManager.AddMovie(movie5);
-
+           
             Console.WriteLine(@"MENÚ DE PRODUCTOS
             1. Mostrar todas las peliculas
             2. Buscar pelicula mediante su titulo
@@ -34,24 +34,22 @@ namespace ejercicio28
             if (option.Equals(1))
             {
                 movieManager.DisplayListMovie();
-                Console.Clear();
-                Main(args);
             }
             else if (option.Equals(2))
             {
                 System.Console.Write("Por favor, escriba el titulo de la pelicula deseada->");
                 string title = Console.ReadLine();
-                movieManager.SearchMovie(title);
                 Console.Clear();
-                Main(args);
+                movieManager.SearchMovie(title);
+             
             }
             else if (option.Equals(3))
             {
                 System.Console.Write("Por favor, escriba el titulo de la pelicula que sera eliminada->");
                 string title = Console.ReadLine();
-                movieManager.removeMovie(title);
                 Console.Clear();
-                Main(args);
+                movieManager.removeMovie(title);
+               
             }
             else if (option.Equals(4))
             {
@@ -60,7 +58,7 @@ namespace ejercicio28
             else
             {
                 System.Console.WriteLine("Por favor, elija una opcion valida del menu.");
-                Main(args);
+              
             }
         }
     }
