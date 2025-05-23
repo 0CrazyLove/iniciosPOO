@@ -23,43 +23,59 @@ namespace ejercicio28
             movieManager.AddMovie(movie3);
             movieManager.AddMovie(movie4);
             movieManager.AddMovie(movie5);
-           
-            Console.WriteLine(@"MENÚ DE PRODUCTOS
+            bool active = false;
+
+            while (!active)
+            {
+
+                Console.WriteLine(@"MENÚ DE PRODUCTOS
             1. Mostrar todas las peliculas
             2. Buscar pelicula mediante su titulo
             3. Eliminar pelicula mediante su titulo
-            4. Salir");
-            System.Console.Write("Por favor, escoja una opcion-> ");
-            int option = int.Parse(Console.ReadLine());
-            if (option.Equals(1))
-            {
-                movieManager.DisplayListMovie();
+            4. Mostrar películas por año
+            5. Salir");
+                System.Console.Write("Por favor, escoja una opcion-> ");
+                int option = int.Parse(Console.ReadLine());
+                if (option.Equals(1))
+                {
+                    movieManager.DisplayListMovie();
+                }
+                else if (option.Equals(2))
+                {
+                    System.Console.Write("Por favor, escriba el titulo de la pelicula deseada->");
+                    string title = Console.ReadLine();
+                    Console.Clear();
+                    movieManager.SearchMovie(title);
+
+                }
+                else if (option.Equals(3))
+                {
+                    System.Console.Write("Por favor, escriba el titulo de la pelicula que sera eliminada->");
+                    string title = Console.ReadLine();
+                    Console.Clear();
+                    movieManager.removeMovie(title);
+
+                }
+                else if (option.Equals(4))
+                {
+                    System.Console.Write("Por favor, escriba el año de estreno de la pelicula->");
+                    int year = int.Parse(Console.ReadLine());
+                    Console.Clear();
+                    movieManager.DisplayMoviesByYear(year);
+                    
+                }
+                else if (option.Equals(5))
+                {
+                    System.Console.WriteLine("VUELVA PRONTO!!!");
+                    active = true;
+                }
+                else
+                {
+                    System.Console.WriteLine("Por favor, elija una opcion valida del menu.");
+
+                }
             }
-            else if (option.Equals(2))
-            {
-                System.Console.Write("Por favor, escriba el titulo de la pelicula deseada->");
-                string title = Console.ReadLine();
-                Console.Clear();
-                movieManager.SearchMovie(title);
-             
-            }
-            else if (option.Equals(3))
-            {
-                System.Console.Write("Por favor, escriba el titulo de la pelicula que sera eliminada->");
-                string title = Console.ReadLine();
-                Console.Clear();
-                movieManager.removeMovie(title);
-               
-            }
-            else if (option.Equals(4))
-            {
-                System.Console.WriteLine("VUELVA PRONTO!!!");
-            }
-            else
-            {
-                System.Console.WriteLine("Por favor, elija una opcion valida del menu.");
-              
-            }
+
         }
     }
 }

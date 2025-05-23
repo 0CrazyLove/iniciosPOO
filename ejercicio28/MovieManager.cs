@@ -84,7 +84,10 @@ namespace ejercicio28
             {
                 if (movie.Premiere.Equals(year))
                 {
-                    DisplayListMovie();
+                    System.Console.WriteLine($"titulo original: {movie.Title}");
+                    System.Console.WriteLine($"director: {movie.Director}");
+                    System.Console.WriteLine($"estreno: {movie.Premiere}");
+                    System.Console.WriteLine("----------------------------------------------------");
                 }
             }
         }
