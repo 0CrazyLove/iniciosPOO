@@ -71,11 +71,34 @@ namespace ejercicio27
 
             }
 
-                if (!removed)
-                {
-                    System.Console.WriteLine("Libro no encontrado. No se puedo eliminar...");
+            if (!removed)
+            {
+                System.Console.WriteLine("Libro no encontrado. No se puedo eliminar...");
 
+            }
+        }
+        //metodo para mostrar lista de libros por X año de lanzamiento
+        public void DisplayListYear(int year)
+        {
+            bool found = false;
+                  Console.WriteLine($"Libros publicados en el año {year}:");
+            foreach (Book book in books)
+            {
+                if (book.Year.Equals(year))
+                {
+                    Console.WriteLine($"Título: {book.Title}");
+                    Console.WriteLine($"Autor: {book.Author}");
+                    Console.WriteLine("------------------------------");
+                    found = true;
+                    
                 }
+
+            }
+            if (!found)
+            {
+                  Console.WriteLine("No se encontraron libros para ese año.");
+                
+            }
         }
 
 
