@@ -19,6 +19,14 @@ namespace ejercicio27
             library.AddBook(book2);
             library.AddBook(book3);
             library.DisplayList();
+            Console.Write("Escribe el título del libro que quieres buscar: ");
+            string search = Console.ReadLine();
+            library.SearchBook(search);
+            System.Console.WriteLine("escriba el titulo del libro que quiseras eliminar: ");
+            string removeBook = Console.ReadLine();
+            library.RemoveBook(removeBook);
+            Console.Clear();
+            library.DisplayList();
 
 
 

@@ -23,7 +23,7 @@ namespace ejercicio27
         //metodo para mostrar la lista
         public void DisplayList()
         {
-                Console.Clear();
+            Console.Clear();
             System.Console.WriteLine("lista de libros:");
             foreach (Book book in books)
             {
@@ -33,7 +33,51 @@ namespace ejercicio27
                 System.Console.WriteLine("--------------------------------------------------------");
             }
         }
-        
+        //metodo para buscar un libro:
+        public void SearchBook(string searchTitle)
+        {
+            bool found = false;
+            foreach (Book book in books)
+            {
+                if (book.Title.Equals(searchTitle, StringComparison.OrdinalIgnoreCase))
+                {
+                    Console.WriteLine("\nLibro encontrado!!");
+                    Console.WriteLine($"Título: {book.Title}");
+                    Console.WriteLine($"Autor: {book.Author}");
+                    Console.WriteLine($"Año: {book.Year}");
+                    found = true;
+                    break;
+                }
+
+            }
+            if (!found)
+            {
+                System.Console.WriteLine("libro no encontrado...");
+            }
+        }
+        //metodo para eliminar un libro mediante su titulo
+        public void RemoveBook(string bookRemove)
+        {
+            bool removed = false;
+            foreach (Book book in books)
+            {
+                if (book.Title.Equals(bookRemove, StringComparison.OrdinalIgnoreCase))
+                {
+                    System.Console.WriteLine($"el libro {book.Title} ha sido eliminado correctamente!");
+                    books.Remove(book);
+                    removed = true;
+                    break;
+                }
+
+            }
+
+                if (!removed)
+                {
+                    System.Console.WriteLine("Libro no encontrado. No se puedo eliminar...");
+
+                }
+        }
+
 
 
     }
