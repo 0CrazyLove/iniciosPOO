@@ -51,7 +51,6 @@ namespace ejercicio28
                         if (title != null)
                         {
                             movieManager.SearchMovie(title);
-
                         }
 
 
