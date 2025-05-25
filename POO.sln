@@ -63,6 +63,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ejercicio29", "ejercicio29\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ejercicio30", "ejercicio30\ejercicio30.csproj", "{209FA320-69B4-4667-90EC-9009DCB1DA27}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ejercicio31", "ejercicio31\ejercicio31.csproj", "{209FA320-69B4-4667-90EC-9009DCB1DA27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ejercicio32", "ejercicio32\ejercicio32.csproj", "{209FA320-69B4-4667-90EC-9009DCB1DA27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ejercicio33", "ejercicio33\ejercicio33.csproj", "{209FA320-69B4-4667-90EC-9009DCB1DA27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ejercicio34", "ejercicio34\ejercicio34.csproj", "{209FA320-69B4-4667-90EC-9009DCB1DA27}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
