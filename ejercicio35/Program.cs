@@ -14,13 +14,21 @@ namespace ejercicio35
             loginMethod.Add(new EmailLogin());
             loginMethod.Add(new SocialMediaLogin());
 
-            if(loginMe)
+
             foreach (ILoginMethod login in loginMethod)
             {
-                login.Authenticate("admin@gmail.com", "1234%");
-                login.Authenticate("user_social", "abcd%");
-                System.Console.WriteLine(login.GetType());
-                System.Console.WriteLine("-------------");
+                if (login is EmailLogin)
+                {
+                    login.Authenticate("admin@gmail.com", "1234%");
+                    System.Console.WriteLine(login.GetLoginType());
+                }
+                if (login is SocialMediaLogin)
+                {
+                    login.Authenticate("user_social", "abcd%");
+                    System.Console.WriteLine(login.GetLoginType());
+                    
+                }
+            
             }
         }
     }
