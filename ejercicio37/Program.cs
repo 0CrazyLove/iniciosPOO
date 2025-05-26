@@ -17,9 +17,9 @@ namespace ejercicio37
             {
                 sound.MakeSound();
 
-                if (sound is Animal a)
+                if (sound is Animal animal)
                 {
-                    a.DisplayType();
+                    animal.DisplayType();
                 }
                 System.Console.WriteLine("--------------------------");
 
