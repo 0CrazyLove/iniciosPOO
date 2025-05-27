@@ -61,7 +61,7 @@ namespace ejercicio38
             get { return priceBase; }
             set
             {
-                if (value <= 0)
+                if (value <= 0 )
                 {
                     throw new Exception("No se permite valores negativos o nulos.");
                 }
