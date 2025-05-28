@@ -10,12 +10,18 @@ namespace ejercicio38
     {
         //atributo lista privada
         private List<IService> services = new List<IService>();
-        
+
         //metodo para agregar un servicio
         public void AddService(Service service)
         {
             services.Add(service);
         }
+
+        public List<IService> ObtenerServicios()
+        {
+            return services;
+        }
+
 
         //metodos para ver todo los servicios
         public void DisplayServices()

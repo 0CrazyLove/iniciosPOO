@@ -11,7 +11,7 @@ namespace ejercicio38
         static void Main(string[] args)
         {
             var serviceManager = new ServiceManager();
-            
+
 
             bool active = false;
             while (!active)
@@ -121,12 +121,17 @@ namespace ejercicio38
                     }
                     else if (option.Equals(2))
                     {
-                        if (serviceManager)
+                        if (serviceManager.ObtenerServicios().Count.Equals(0))
                         {
-                            
+                            System.Console.WriteLine("Error. no tienes ningun servicio agregado.");
                         }
-                        serviceManager.DisplayServices();
-
+                        else
+                        {
+                            foreach (var sv in serviceManager.ObtenerServicios())
+                            {
+                                sv.DisplayInfo();
+                            }
+                        }
                     }
 
 

@@ -13,10 +13,11 @@ namespace ejercicio38
         //constructor
         public ServiceDeveloper(string name, string description, decimal priceBase, int hours) : base(name, description, priceBase)
         {
+            Hours = hours;
 
         }
         //propiedad publica de hours
-        public int Hourse
+        public int Hours
         {
             get { return hours; }
             set
@@ -35,15 +36,16 @@ namespace ejercicio38
         //metodos sobre escritos y propios de la clase ServiceDeveloper
         public override decimal CalculatePriceFinish()
         {
-            decimal bonus = PriceBase * Hourse;
+            decimal bonus = PriceBase * Hours;
             return bonus;
         }
         public override void DisplayInfo()
         {
             System.Console.WriteLine($"Nombre del Programador: {Name}");
             System.Console.WriteLine($"Descripcion del Programador: {Description}");
+            System.Console.WriteLine($"cantidad de horas: {Hours}");
             System.Console.WriteLine($"Precio base: {PriceBase}");
-            System.Console.WriteLine($"Precio final: {CalculatePriceFinish}");
+            System.Console.WriteLine($"Precio final: {CalculatePriceFinish()}");
         }
     }
 }

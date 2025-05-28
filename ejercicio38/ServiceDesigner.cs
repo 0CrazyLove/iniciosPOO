@@ -27,7 +27,7 @@ namespace ejercicio38
             System.Console.WriteLine($"Nombre del diseñador: {Name}");
             System.Console.WriteLine($"Descripcion del diseñador: {Description}");
             System.Console.WriteLine($"Precio base: {PriceBase}");
-            System.Console.WriteLine($"Precio final: {CalculatePriceFinish}");
+            System.Console.WriteLine($"Precio final: {CalculatePriceFinish()}");
         }
 
     }

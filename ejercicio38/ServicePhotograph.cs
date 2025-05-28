@@ -50,7 +50,7 @@ namespace ejercicio38
             System.Console.WriteLine($"Precio base: {PriceBase}");
             System.Console.WriteLine($"Cantidad de fotos: {AmountPhotos}");
             System.Console.WriteLine($"Precio por fotos extras: {PricePhotoExtra}");
-            System.Console.WriteLine($"Precio final: {CalculatePriceFinish}");
+            System.Console.WriteLine($"Precio final: {CalculatePriceFinish()}");
         }
 
 
