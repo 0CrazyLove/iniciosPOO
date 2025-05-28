@@ -39,7 +39,7 @@ namespace ejercicio38
                         bool exitoOption = int.TryParse(Console.ReadLine(), out optionService);
                         if (exitoOption)
                         {
-                            if (option.Equals(1))
+                            if (optionService.Equals(1))
                             {
                                 System.Console.WriteLine("Has elegido: Servicio de Diseño.");
                                 System.Console.Write("Ingrese el nombre del servicio: \n>");
@@ -57,7 +57,7 @@ namespace ejercicio38
 
 
                             }
-                            else if (option.Equals(2))
+                            else if (optionService.Equals(2))
                             {
                                 System.Console.WriteLine("Has elegido: Servicio de Programacion.");
                                 System.Console.Write("Ingrese el nombre del servicio: \n>");
