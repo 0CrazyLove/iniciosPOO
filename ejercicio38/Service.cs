@@ -12,8 +12,10 @@ namespace ejercicio38
         private string name = String.Empty;
         private string description = String.Empty;
         private decimal priceBase;
+        private static int counterID=1;
         protected int ID;
-        
+
+
 
         //constructor
         public Service(string name, string description, decimal priceBase)
@@ -21,6 +23,7 @@ namespace ejercicio38
             Name = name;
             Description = description;
             PriceBase = priceBase;
+            ID = counterID++;
         }
 
         //pripiedad publica para name
@@ -74,7 +77,7 @@ namespace ejercicio38
         }
         //propiedad publica de ID
         public int _ID{
-            get{ return ID = ID+1; }
+            get{ return ID; }
         
         }
         //metodos abstracto
