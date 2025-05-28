@@ -74,15 +74,46 @@ namespace ejercicio38
                                 System.Console.Write("Ingrese la cantidad de hora de servicio \n>");
                                 int hours;
                                 bool exitoHours = int.TryParse(Console.ReadLine(), out hours);
-                                if(!exitoHours){
+                                if (!exitoHours)
+                                {
                                     throw new Exception("Ingrese una cantidad de hora valida.");
                                 }
-                                ServiceDeveloper serviceDeveloper = new ServiceDeveloper(nameServiceDeveloper!, descriptionServiceDeveloper! , priceBaseServiceDeveloper, hours);
+                                ServiceDeveloper serviceDeveloper = new ServiceDeveloper(nameServiceDeveloper!, descriptionServiceDeveloper!, priceBaseServiceDeveloper, hours);
+                            }
+                            else if (optionService.Equals(3))
+                            {
+                                System.Console.WriteLine("Has elegido: Servicio de Fotografia.");
+                                System.Console.Write("Ingrese el nombre del servicio: \n>");
+                                string? nameServicePhotograph = Console.ReadLine();
+                                System.Console.Write("Ingrese la descripción: \n>");
+                                string? descriptionServicePhotograph = Console.ReadLine();
+                                System.Console.Write("Ingrese el precio basae: \n>");
+                                decimal priceBaseServicePhotograph;
+                                bool exitoPriceBaseServicePhotograph = decimal.TryParse(Console.ReadLine(), out priceBaseServicePhotograph);
+                                if (!exitoPriceBaseServicePhotograph)
+                                {
+                                    throw new Exception("Escriba un precio valido.");
+                                }
+                                System.Console.Write("Ingrese la cantidad de fotos del servicio \n>");
+                                int amountPhotos;
+                                bool exitoAmountPhotos = int.TryParse(Console.ReadLine(), out amountPhotos);
+                                if (!exitoAmountPhotos)
+                                {
+                                    throw new Exception("Ingrese una cantidad de fotos valida.");
+                                }
+                                ServiceDeveloper serviceDeveloper = new ServiceDeveloper(nameServicePhotograph!, descriptionServicePhotograph!, priceBaseServicePhotograph, amountPhotos);
+
                             }
 
                         }
+                        else
+                        {
+                            System.Console.WriteLine("Error. escoja una opcion valida");
+                        }
 
 
+                    } else if (option.Equals(2)){
+                        
                     }
                    
 
