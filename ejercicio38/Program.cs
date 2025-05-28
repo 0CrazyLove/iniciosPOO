@@ -10,6 +10,9 @@ namespace ejercicio38
     {
         static void Main(string[] args)
         {
+            var serviceManager = new ServiceManager();
+            
+
             bool active = false;
             while (!active)
             {
@@ -17,7 +20,7 @@ namespace ejercicio38
 
                 Console.WriteLine(@"MENÚ DE PRODUCTOS
             1. Agregar nuevo servicio
-            2. Buscar pelicula mediante su titulo
+            2. Ver todos los servicios
             3. Eliminar pelicula mediante su titulo
             4. Mostrar películas por año
             5. Salir");
@@ -53,7 +56,8 @@ namespace ejercicio38
                                 {
                                     throw new Exception("Escriba un precio valido.");
                                 }
-                                ServiceDesigner serviceDesigner = new ServiceDesigner(nameServiceDesigner!, descriptionServiceDesigner!, priceBaseServiceDesigner);
+                                var serviceDesigner = new ServiceDesigner(nameServiceDesigner!, descriptionServiceDesigner!, priceBaseServiceDesigner);
+                                serviceManager.AddService(serviceDesigner);
 
 
                             }
@@ -78,7 +82,8 @@ namespace ejercicio38
                                 {
                                     throw new Exception("Ingrese una cantidad de hora valida.");
                                 }
-                                ServiceDeveloper serviceDeveloper = new ServiceDeveloper(nameServiceDeveloper!, descriptionServiceDeveloper!, priceBaseServiceDeveloper, hours);
+                                var serviceDeveloper = new ServiceDeveloper(nameServiceDeveloper!, descriptionServiceDeveloper!, priceBaseServiceDeveloper, hours);
+                                serviceManager.AddService(serviceDeveloper);
                             }
                             else if (optionService.Equals(3))
                             {
@@ -101,7 +106,8 @@ namespace ejercicio38
                                 {
                                     throw new Exception("Ingrese una cantidad de fotos valida.");
                                 }
-                                ServiceDeveloper serviceDeveloper = new ServiceDeveloper(nameServicePhotograph!, descriptionServicePhotograph!, priceBaseServicePhotograph, amountPhotos);
+                                var servicePhotograph = new ServicePhotograph(nameServicePhotograph!, descriptionServicePhotograph!, priceBaseServicePhotograph, amountPhotos);
+                                serviceManager.AddService(servicePhotograph);
 
                             }
 
@@ -112,10 +118,17 @@ namespace ejercicio38
                         }
 
 
-                    } else if (option.Equals(2)){
-                        
                     }
-                   
+                    else if (option.Equals(2))
+                    {
+                        if (serviceManager)
+                        {
+                            
+                        }
+                        serviceManager.DisplayServices();
+
+                    }
+
 
 
                 }

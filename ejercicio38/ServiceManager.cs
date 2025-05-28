@@ -9,7 +9,8 @@ namespace ejercicio38
     class ServiceManager
     {
         //atributo lista privada
-        private List<Service> services = new List<Service>();
+        private List<IService> services = new List<IService>();
+        
         //metodo para agregar un servicio
         public void AddService(Service service)
         {
