@@ -21,9 +21,8 @@ namespace ejercicio38
                 Console.WriteLine(@"MENÚ DE PRODUCTOS
             1. Agregar nuevo servicio
             2. Ver todos los servicios
-            3. Eliminar pelicula mediante su titulo
-            4. Mostrar películas por año
-            5. Salir");
+            3. Buscar servicio por nombre
+            4. Salir");
 
                 System.Console.Write("Por favor , seleccione una opcion valida->");
                 int option;
@@ -44,6 +43,7 @@ namespace ejercicio38
                         {
                             if (optionService.Equals(1))
                             {
+                                Console.Clear();
                                 System.Console.WriteLine("Has elegido: Servicio de Diseño.");
                                 System.Console.Write("Ingrese el nombre del servicio: \n>");
                                 string? nameServiceDesigner = Console.ReadLine();
@@ -63,6 +63,7 @@ namespace ejercicio38
                             }
                             else if (optionService.Equals(2))
                             {
+                                Console.Clear();
                                 System.Console.WriteLine("Has elegido: Servicio de Programacion.");
                                 System.Console.Write("Ingrese el nombre del servicio: \n>");
                                 string? nameServiceDeveloper = Console.ReadLine();
@@ -87,6 +88,7 @@ namespace ejercicio38
                             }
                             else if (optionService.Equals(3))
                             {
+                                Console.Clear();
                                 System.Console.WriteLine("Has elegido: Servicio de Fotografia.");
                                 System.Console.Write("Ingrese el nombre del servicio: \n>");
                                 string? nameServicePhotograph = Console.ReadLine();
@@ -121,6 +123,7 @@ namespace ejercicio38
                     }
                     else if (option.Equals(2))
                     {
+                        Console.Clear();
                         if (serviceManager.ObtenerServicios().Count.Equals(0))
                         {
                             System.Console.WriteLine("Error. no tienes ningun servicio agregado.");
@@ -132,6 +135,20 @@ namespace ejercicio38
                                 sv.DisplayInfo();
                             }
                         }
+                    }
+                    else if (option.Equals(3))
+                    {
+                        Console.Clear();
+                        System.Console.Write("Ingrese el nombre del servicio que desea buscar:");
+                        string? nameService = Console.ReadLine();
+                        serviceManager.ServiceSearch(nameService!);
+
+                    }
+                    else if (option.Equals(4))
+                    {
+                        System.Console.WriteLine("Gracias por usar nuestros servicios!!");
+                        active = true;
+                        
                     }
 
 

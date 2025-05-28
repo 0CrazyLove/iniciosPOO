@@ -8,6 +8,8 @@ namespace ejercicio38
 {
     class ServiceDesigner : Service
     {
+        //atributo privado 
+      
         //constructor
         public ServiceDesigner(string name, string description, decimal priceBase) : base(name, description, priceBase)
         {
@@ -24,10 +26,12 @@ namespace ejercicio38
 
         public override void DisplayInfo()
         {
+            System.Console.WriteLine($"ID de servicio: {_ID}");
             System.Console.WriteLine($"Nombre del diseñador: {Name}");
             System.Console.WriteLine($"Descripcion del diseñador: {Description}");
             System.Console.WriteLine($"Precio base: {PriceBase}");
             System.Console.WriteLine($"Precio final: {CalculatePriceFinish()}");
+            System.Console.WriteLine("--------------------------------");
         }
 
     }

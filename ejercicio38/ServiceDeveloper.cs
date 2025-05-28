@@ -10,6 +10,7 @@ namespace ejercicio38
     {
         //atributo protegido de la clase
         protected int hours;
+
         //constructor
         public ServiceDeveloper(string name, string description, decimal priceBase, int hours) : base(name, description, priceBase)
         {
@@ -41,11 +42,13 @@ namespace ejercicio38
         }
         public override void DisplayInfo()
         {
+            System.Console.WriteLine($"ID del servicio: {_ID}");
             System.Console.WriteLine($"Nombre del Programador: {Name}");
             System.Console.WriteLine($"Descripcion del Programador: {Description}");
             System.Console.WriteLine($"cantidad de horas: {Hours}");
             System.Console.WriteLine($"Precio base: {PriceBase}");
             System.Console.WriteLine($"Precio final: {CalculatePriceFinish()}");
+            System.Console.WriteLine("--------------------------------");
         }
     }
 }

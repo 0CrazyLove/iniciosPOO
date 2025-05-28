@@ -12,6 +12,9 @@ namespace ejercicio38
         protected int amountPhotos;
         protected decimal PricePhotoExtra = 50.000m;
 
+
+
+
         //constructor
         public ServicePhotograph(string name, string description, decimal priceBase, int amountPhotos) : base(name, description, priceBase)
         {
@@ -45,12 +48,14 @@ namespace ejercicio38
 
         public override void DisplayInfo()
         {
+            System.Console.WriteLine($"ID del servicio: {_ID}");
             System.Console.WriteLine($"Nombre del fotografo: {Name}");
             System.Console.WriteLine($"Descripcion del fotografp: {Description}");
             System.Console.WriteLine($"Precio base: {PriceBase}");
             System.Console.WriteLine($"Cantidad de fotos: {AmountPhotos}");
             System.Console.WriteLine($"Precio por fotos extras: {PricePhotoExtra}");
             System.Console.WriteLine($"Precio final: {CalculatePriceFinish()}");
+            System.Console.WriteLine("--------------------------------");
         }
 
 

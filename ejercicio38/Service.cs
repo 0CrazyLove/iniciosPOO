@@ -12,6 +12,7 @@ namespace ejercicio38
         private string name = String.Empty;
         private string description = String.Empty;
         private decimal priceBase;
+        protected int ID;
         
 
         //constructor
@@ -70,6 +71,11 @@ namespace ejercicio38
                     this.priceBase = value;
                 }
             }
+        }
+        //propiedad publica de ID
+        public int _ID{
+            get{ return ID = ID+1; }
+        
         }
         //metodos abstracto
         abstract public decimal CalculatePriceFinish();

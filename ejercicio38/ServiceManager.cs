@@ -23,15 +23,6 @@ namespace ejercicio38
         }
 
 
-        //metodos para ver todo los servicios
-        public void DisplayServices()
-        {
-            System.Console.WriteLine("Listas de servicios:");
-            foreach (Service sv in services)
-            {
-                System.Console.WriteLine($"Nombres de los servicios: {sv.Name}");
-            }
-        }
         //metodo para buscar el servicio por nombre
         public void ServiceSearch(string name)
         {
@@ -42,9 +33,11 @@ namespace ejercicio38
                 if (sv.Name.Equals(name, StringComparison.OrdinalIgnoreCase))
                 {
                     System.Console.WriteLine("El servicio se ha encontrado!!");
+                    System.Console.WriteLine($"ID del servicio: {sv._ID}");
                     System.Console.WriteLine($"nombre del servicio : {sv.Name}");
                     System.Console.WriteLine($"descripcion del servicio : {sv.Description}");
                     System.Console.WriteLine($"Precio base del servicio : {sv.PriceBase}");
+                    System.Console.WriteLine("----------------------------------");
                     found = true;
                     break;
 
@@ -57,6 +50,8 @@ namespace ejercicio38
 
         }
 
+
+      
 
 
     }
